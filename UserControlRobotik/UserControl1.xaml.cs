@@ -24,5 +24,20 @@ namespace UserControlRobotik
         {
             InitializeComponent();
         }
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void stopBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
