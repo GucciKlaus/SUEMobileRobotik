@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:UserControlRobotik"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <GroupBox Name="groupBox">
+    <GroupBox Name="groupBox" Margin="5">
     <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -20,7 +20,7 @@
                 <RowDefinition Height="2*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Slider Name="slider" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Orientation="Vertical" HorizontalAlignment="Center" Margin="5"></Slider>
+            <Slider Name="slider" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Orientation="Vertical" HorizontalAlignment="Center" Margin="5" ValueChanged="slider_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="-100" Maximum="100"></Slider>
             <Button Name="startButton" Grid.Column="1" Grid.Row="0" Click="startButton_Click" Background="Transparent" Margin="5">
                 <Image Source="/UserControlRobotik;component/fast-forward-button.jpg">
                     <Image.LayoutTransform>
@@ -32,7 +32,11 @@
             <Button Name="stopBtn" Click="stopBtn_Click" Grid.Row="2" Grid.Column="1" Background="Transparent">
                 <Image Source="/UserControlRobotik;component/stopbutton.jpg" Margin="5"></Image>
             </Button>
-            <ProgressBar Name="backSpdPrgBard" Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="5"></ProgressBar>
+            <ProgressBar Name="backSpdPrgBard" Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="5">
+                <ProgressBar.LayoutTransform>
+                    <RotateTransform Angle="180"></RotateTransform>
+                </ProgressBar.LayoutTransform>
+            </ProgressBar>
             <Button Name="backButton" Click="backButton_Click" Grid.Row="4" Grid.Column="1" Background="Transparent" Margin="5">
                 <Image Source="/UserControlRobotik;component/fast-forward-button.jpg">
                     <Image.LayoutTransform>
@@ -45,7 +49,7 @@
                     <RotateTransform Angle="90"></RotateTransform>
                 </Label.LayoutTransform>
             </Label>
-            <Label Name="pctLabel" Grid.Row="2" Grid.Column="3"></Label>
+            <Label Name="pctLabel" Grid.Row="2" Grid.Column="3" FontWeight="Bold" Content="0%"></Label>
             <Label Grid.Row="3" Grid.Column="2" Content="Backward" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Label.LayoutTransform>
                     <RotateTransform Angle="90"></RotateTransform>

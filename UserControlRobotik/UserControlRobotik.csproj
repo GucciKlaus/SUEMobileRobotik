@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ImagesMobileRobotik\**" />
+    <EmbeddedResource Remove="ImagesMobileRobotik\**" />
+    <None Remove="ImagesMobileRobotik\**" />
+    <Page Remove="ImagesMobileRobotik\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="fast-forward-button.jpg" />
-    <None Remove="ImagesMobileRobotik\fast-forward-button.jpg" />
-    <None Remove="ImagesMobileRobotik\MobRobotDraufsicht.png" />
-    <None Remove="ImagesMobileRobotik\stopbutton.jpg" />
     <None Remove="MobRobotDraufsicht.png" />
     <None Remove="stopbutton.jpg" />
   </ItemGroup>
@@ -19,18 +23,9 @@
     <Resource Include="fast-forward-button.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="ImagesMobileRobotik\stopbutton.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="ImagesMobileRobotik\fast-forward-button.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="ImagesMobileRobotik\MobRobotDraufsicht.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="MobRobotDraufsicht.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

@@ -11,6 +11,7 @@
     <None Remove="ImagesMobileRobotik\fast-forward-button.jpg" />
     <None Remove="ImagesMobileRobotik\MobRobotDraufsicht.png" />
     <None Remove="ImagesMobileRobotik\stopbutton.jpg" />
+    <None Remove="MobRobotDraufsicht.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,7 @@
     <Resource Include="ImagesMobileRobotik\stopbutton.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="MobRobotDraufsicht.png" />
   </ItemGroup>
 
 </Project>
