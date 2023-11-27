@@ -28,11 +28,11 @@
                     </Image.LayoutTransform>
                 </Image>
             </Button>
-            <ProgressBar Name="spdPrgBard" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="5"></ProgressBar>
+            <ProgressBar Name="spdPrgBard" Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="5" MouseDown="spdPrgBard_MouseDown"></ProgressBar>
             <Button Name="stopBtn" Click="stopBtn_Click" Grid.Row="2" Grid.Column="1" Background="Transparent">
                 <Image Source="/UserControlRobotik;component/stopbutton.jpg" Margin="5"></Image>
             </Button>
-            <ProgressBar Name="backSpdPrgBard" Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="5">
+            <ProgressBar Name="backSpdPrgBard" Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="5" MouseDown="backSpdPrgBard_MouseDown">
                 <ProgressBar.LayoutTransform>
                     <RotateTransform Angle="180"></RotateTransform>
                 </ProgressBar.LayoutTransform>
