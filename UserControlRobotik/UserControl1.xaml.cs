@@ -76,17 +76,17 @@ namespace UserControlRobotik
         private void backSpdPrgBard_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point clickPoint = e.GetPosition(backSpdPrgBard);
-            double clickPercentage = clickPoint.Y / backSpdPrgBard.ActualHeight;
-            double clickedValue = clickPercentage * backSpdPrgBard.Maximum * -1;
-            slider.Value = clickedValue;
+            double clickPercentage = 1-(clickPoint.Y / backSpdPrgBard.ActualHeight);
+            double clickedValue = clickPercentage * 100;
+            slider.Value = clickedValue * -1;
             pctLabel.Content = slider.Value + "%";
         }
 
         private void spdPrgBard_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point clickPoint = e.GetPosition(spdPrgBard);
-            double clickPercentage = clickPoint.Y / spdPrgBard.ActualHeight;
-            double clickedValue = clickPercentage * spdPrgBard.Maximum *-1;
+            double clickPercentage = 1-(clickPoint.Y / spdPrgBard.ActualHeight);
+            double clickedValue = clickPercentage * 100;
             slider.Value = clickedValue;
             pctLabel.Content = slider.Value + "%";
         }
